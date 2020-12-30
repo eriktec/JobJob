@@ -11,24 +11,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activities.Clientes.RequestSocio"></activity>
+        android:theme="@style/JobJobTheme">
         <activity
-            android:name=".activities.Clientes.DetailRequest"
-            android:parentActivityName=".activities.Clientes.MapCliente" />
-        <activity android:name=".activities.Socios.MapSocio" />
-        <activity android:name=".activities.Clientes.MapCliente" />
-        <activity android:name=".activities.Socios.RegistroSocios" />
+            android:name=".ControlActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobJobTheme.Control" />
         <activity
-            android:name=".activities.Login"
-            android:parentActivityName=".activities.OptAuth" />
-        <activity
-            android:name=".activities.Clientes.RegistroCliente"
-            android:parentActivityName=".activities.OptAuth" />
-        <activity
-            android:name=".activities.OptAuth"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

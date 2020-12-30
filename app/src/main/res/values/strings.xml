@@ -1,9 +1,22 @@
 <resources>
     <string name="app_name">JobJob</string>
-    <string-array name="Spinner_items">
-        <item>Plomero</item>
-        <item>Electricista</item>
-
-
-    </string-array>
+    <string name="iniciar">Iniciar</string>
+    <string name="registrarse">Registrarse</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="iniciar_titulo">Iniciar</string>
+    <string name="correo">Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="registro_title">Registro</string>
+    <string name="phone">Telefono</string>
+    <string name="title_activity_control">ControlActivity</string>
+    <string name="mapa">Mapa</string>
+    <string name="historial">Historial</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="salir">Salir</string>
+    <string name="acerca">Acerca</string>
+    <string name="conectar">Conectar</string>
+    <string name="no_data">no data</string>
+    <string name="historial">Historial</string>
 </resources>
