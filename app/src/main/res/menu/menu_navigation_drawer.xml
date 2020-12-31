@@ -13,12 +13,12 @@
         android:id="@+id/group1"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/menu_settings"
+            android:id="@+id/configuracionFragment"
             android:title="@string/configuracion" />
     </group>
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/menu_acerca"
+            android:id="@+id/aboutFragment"
             android:title="@string/acerca"/>
         <item
             android:id="@+id/menu_salir"

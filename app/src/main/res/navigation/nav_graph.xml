@@ -16,4 +16,14 @@
         android:name="com.res.jobjob.ui.history.HistoryFragment"
         android:label="@string/historial"
         tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/configuracionFragment"
+        android:name="com.res.jobjob.ui.configuracion.ConfiguracionFragment"
+        android:label="@string/configuracion"
+        tools:layout="@layout/fragment_config" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.res.jobjob.ui.about.AboutFragment"
+        android:label="@string/acerca"
+        tools:layout="@layout/fragment_about" />
 </navigation>

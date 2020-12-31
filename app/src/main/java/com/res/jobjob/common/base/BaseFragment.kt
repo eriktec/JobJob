@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.res.jobjob.ControlActivity
 import com.res.jobjob.model.data.User
-import dmax.dialog.SpotsDialog
 
 open class BaseFragment : Fragment() {
 
@@ -16,7 +15,7 @@ open class BaseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        alertDialog = SpotsDialog.Builder().setContext(requireContext()).setMessage("Iniciando").build()
+        alertDialog = BaseDialogs.loadingDialog(requireContext(), "Iniciando")
     }
 
     protected fun String.checkString(): Boolean {

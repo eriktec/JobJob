@@ -17,4 +17,8 @@ class RepoDbImp(private val dbService: DbService) : RepoDb {
     override fun getJobs(_jobs: MutableLiveData<*>) {
         dbService.getJobs(_jobs)
     }
+
+    override fun editUser(user: User, _success: MutableLiveData<*>) {
+        dbService.editUser(user, _success)
+    }
 }

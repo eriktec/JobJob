@@ -1,34 +1,28 @@
 package com.res.jobjob.vm.map
 
-import android.util.Log
-import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.res.jobjob.ui.map.SupportFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 
 class MapViewModel : ViewModel() {
 
-    private var statusButton: Boolean = true
-    lateinit var supportFragment: SupportFragment
-    private val _nombreButton = MutableLiveData<String>().apply { value = "Conectar" }
+    var status: Boolean = true
+    var marker: Marker? = null
+    var latLng: LatLng? = null
+
+    private val _nameButton = MutableLiveData<String>().apply { value = "Conectar" }
     val nameButton: LiveData<String>
-        get() = _nombreButton
+        get() = _nameButton
 
-    fun buttonClick(view: View) {
-        if (statusButton) {
-            _nombreButton.value = "Desconectar"
-            statusButton = false
-            supportFragment.start(view.context)
-        } else {
-            _nombreButton.value = "Conectar"
-            statusButton = true
-            supportFragment.desconectar()
+    fun switchStatus() {
+        if (this.status) {
+            _nameButton.value = "Desconectar"
+            status = false
+            return
         }
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        Log.d("Hi", "Hola")
+        _nameButton.value = "Conectar"
+        status = true
     }
 }

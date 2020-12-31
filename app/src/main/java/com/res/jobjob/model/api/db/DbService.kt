@@ -10,4 +10,6 @@ interface DbService {
     fun getUser(id: String, _success: MutableLiveData<*>)
 
     fun getJobs(_jobs: MutableLiveData<*>)
+
+    fun editUser(user: User, _success: MutableLiveData<*>)
 }

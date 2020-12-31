@@ -2,7 +2,6 @@ package com.res.jobjob
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -62,7 +61,7 @@ class ControlActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
                 viewModel.salir()
                 salir()
             }
-            else -> { item.onNavDestinationSelected(navController) }
+            else -> { if (!item.isChecked) item.onNavDestinationSelected(navController) }
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true

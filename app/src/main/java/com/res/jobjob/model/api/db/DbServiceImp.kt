@@ -56,4 +56,13 @@ class DbServiceImp : DbService {
 
         })
     }
+
+    override fun editUser(user: User, _success: MutableLiveData<*>) {
+        _success.value = Resource.Loading<String>()
+        val reference = firebaseDb.getReference("Socios").child(user.id)
+        reference.setValue(user).addOnCompleteListener {
+            _success.value = if (it.isSuccessful) Resource.Success("Success")
+            else Resource.Error("Error")
+        }
+    }
 }

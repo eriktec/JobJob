@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.map.MapFragment">
 
-    <data>
-
+    <data >
         <variable
             name="handler"
             type="com.res.jobjob.vm.map.MapViewModel" />
@@ -29,7 +28,6 @@
             android:layout_marginStart="@dimen/margin"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginBottom="25dp"
-            android:onClick="@{handler::buttonClick}"
             android:text="@{handler.nameButton}" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
