@@ -13,7 +13,7 @@ class AuthImp : Auth {
     override fun signIn(email: String, password: String, _status: MutableLiveData<*>) {
         _status.value = Resource.Loading<String>()
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
-            _status.value = if (it.isSuccessful) Resource.Success(auth.uid.toString())
+            _status.value = if (it.isSuccessful) Resource.Success(getId())
             else Resource.Error("No se pudo registrar el usuario")
         }
     }
@@ -22,13 +22,21 @@ class AuthImp : Auth {
         _status.value = Resource.Loading<String>()
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
             _status.value = when (it.isSuccessful) {
-                true -> Resource.Success(auth.uid.toString())
+                true -> Resource.Success(getId())
                 else -> Resource.Error("El usuario no existe")
             }
         }
     }
 
+    override fun getId(): String {
+        return auth.uid ?: ""
+    }
+
     override fun signOut() {
         auth.signOut()
+    }
+
+    override fun exist(): Boolean {
+        return auth.currentUser != null
     }
 }

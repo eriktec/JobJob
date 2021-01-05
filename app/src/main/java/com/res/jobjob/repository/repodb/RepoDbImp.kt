@@ -1,7 +1,7 @@
 package com.res.jobjob.repository.repodb
 
 import androidx.lifecycle.MutableLiveData
-import com.res.jobjob.model.api.db.DbService
+import com.res.jobjob.model.api.db.user.DbService
 import com.res.jobjob.model.data.User
 
 class RepoDbImp(private val dbService: DbService) : RepoDb {

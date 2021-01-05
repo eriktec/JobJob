@@ -8,7 +8,7 @@
 
         <variable
             name="handler"
-            type="com.res.jobjob.common.handlers.Handlers" />
+            type="com.res.jobjob.common.handler.Handlers" />
     </data>
 
     <LinearLayout

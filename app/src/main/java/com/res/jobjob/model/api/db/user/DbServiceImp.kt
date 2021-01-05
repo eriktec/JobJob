@@ -1,4 +1,4 @@
-package com.res.jobjob.model.api.db
+package com.res.jobjob.model.api.db.user
 
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.database.DataSnapshot

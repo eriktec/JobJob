@@ -1,4 +1,4 @@
-package com.res.jobjob.common.handlers
+package com.res.jobjob.common.handler
 
 class Handlers {
 

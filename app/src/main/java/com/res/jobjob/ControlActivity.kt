@@ -2,6 +2,7 @@ package com.res.jobjob
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -25,13 +26,14 @@ class ControlActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
     private lateinit var binding: ActivityControlBinding
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var headerBinding: HeaderNavigationDrawerBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_control)
         val bundle = intent.extras
         if (bundle != null) {
-            val user: User = bundle.getSerializable("user") as User
+            val user = bundle.getSerializable("user") as User
             headerNav(user)
         }
         val navHostFragment = supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
@@ -41,9 +43,23 @@ class ControlActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
         binding.navigationView.setNavigationItemSelectedListener(this)
     }
 
+    override fun onStart() {
+        super.onStart()
+        viewModel.crearToken()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putSerializable("user", headerBinding.user)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        headerBinding.user = savedInstanceState.getSerializable("user") as User
+    }
 
     private fun headerNav(user: User) {
-        val headerBinding: HeaderNavigationDrawerBinding = HeaderNavigationDrawerBinding.bind(binding.navigationView.getHeaderView(0))
+        headerBinding = HeaderNavigationDrawerBinding.bind(binding.navigationView.getHeaderView(0))
         headerBinding.user = user
     }
 

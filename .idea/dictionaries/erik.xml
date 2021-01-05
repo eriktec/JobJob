@@ -40,6 +40,8 @@
       <w>datos</w>
       <w>descargando</w>
       <w>desconectar</w>
+      <w>detalle</w>
+      <w>detalles</w>
       <w>elija</w>
       <w>empleo</w>
       <w>empleos</w>
@@ -52,6 +54,7 @@
       <w>hola</w>
       <w>imagen</w>
       <w>incertar</w>
+      <w>informacion</w>
       <w>iniciado</w>
       <w>iniciando</w>
       <w>iniciar</w>
@@ -60,8 +63,10 @@
       <w>insertar</w>
       <w>invalido</w>
       <w>jobjob</w>
+      <w>latitud</w>
       <w>lista</w>
       <w>llenos</w>
+      <w>longitud</w>
       <w>mapa</w>
       <w>mensaje</w>
       <w>metodos</w>
@@ -89,6 +94,7 @@
       <w>seccion</w>
       <w>sección</w>
       <w>seguardo</w>
+      <w>servicio</w>
       <w>servicios</w>
       <w>socio</w>
       <w>socios</w>
@@ -99,6 +105,7 @@
       <w>tipo</w>
       <w>titulo</w>
       <w>todos</w>
+      <w>trabajo</w>
       <w>ubicacion</w>
       <w>usuario</w>
       <w>vacio</w>

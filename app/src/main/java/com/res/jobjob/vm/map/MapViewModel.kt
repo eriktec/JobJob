@@ -5,8 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
+import com.res.jobjob.repository.repoauth.RepoAuth
+import com.res.jobjob.repository.repogeo.RepoGeoFire
 
-class MapViewModel : ViewModel() {
+class MapViewModel(private val repoAuth: RepoAuth,private val repoGeoFire: RepoGeoFire) : ViewModel() {
 
     var status: Boolean = true
     var marker: Marker? = null
@@ -24,5 +26,13 @@ class MapViewModel : ViewModel() {
         }
         _nameButton.value = "Conectar"
         status = true
+    }
+
+    fun addPosition() {
+        repoGeoFire.updatePosition(repoAuth.getId(), latLng!!)
+    }
+
+    fun removePosition() {
+        repoGeoFire.removePosition(repoAuth.getId())
     }
 }

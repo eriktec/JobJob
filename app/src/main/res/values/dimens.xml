@@ -9,4 +9,5 @@
     <dimen name="header_dimen">192dp</dimen>
     <dimen name="header_left_padding">16dp</dimen>
     <dimen name="margin_bottom_text_name">5dp</dimen>
+    <dimen name="padding_text_scroll">10dp</dimen>
 </resources>

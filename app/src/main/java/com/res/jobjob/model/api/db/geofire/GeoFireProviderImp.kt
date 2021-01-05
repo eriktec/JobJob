@@ -1,4 +1,4 @@
-package com.res.jobjob.model.api.db
+package com.res.jobjob.model.api.db.geofire
 
 import com.firebase.geofire.GeoFire
 import com.firebase.geofire.GeoLocation

@@ -1,4 +1,4 @@
-package com.res.jobjob.model.api.db
+package com.res.jobjob.model.api.db.geofire
 
 import com.google.android.gms.maps.model.LatLng
 

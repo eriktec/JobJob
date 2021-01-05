@@ -8,5 +8,9 @@ interface Auth {
 
     fun login(email: String, password: String, _status: MutableLiveData<*>)
 
+    fun getId(): String
+
     fun signOut()
+
+    fun exist(): Boolean
 }

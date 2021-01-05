@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.res.jobjob.R
 import com.res.jobjob.common.base.BaseFragment
-import com.res.jobjob.common.handlers.Handlers
+import com.res.jobjob.common.handler.Handlers
 import com.res.jobjob.common.vo.Resource
 import com.res.jobjob.databinding.FragmentLoginBinding
 import com.res.jobjob.repository.RepoFactory
